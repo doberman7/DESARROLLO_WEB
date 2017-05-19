@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  width: 768px;
+}
+.content{
+  width: 768px;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+nav{
+  background-color: #acacac;
+}
+  ul{
+   list-style-type: none;
+   margin: 0;
+  }
+    li{
+      float: left;
+      display: inline;
+      padding: 5px;
+    }
+      a{
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding-left: 80px;
+       }
+
+.footer{
+  /*<div class="footer">
+    <strong><i>Derechos &copy; 2015 Lorem S.A. de C.V</i></strong>
+  </div>*/
+  text-align: inherit;
+  margin-top: 20px;
+}
