@@ -1,0 +1,10 @@
+<!-- Estamos haciendo uso de nuestra variable de instancia @users, la cual contiene un arreglo de objetos User. Al momento de usarla en la vista, tenemos que iterar en el arreglo para poder acceder a los atributos de cada uno de nuestros objetos. -->
+<h1>All Users</h1>
+  <% @users.each_with_index do |user, index| %>
+  <!-- además de mostrar todos los usuarios, vamos a poner un link sobre el nombre de cada usuario para que nos redirija a su perfil. Remplaza la línea de abajo: -->
+    <!-- <p><%= index + 1 %>. <%= user.name %></p> -->
+    <!-- por: -->
+    <p><%= index + 1 %>. <a href="/users/<%= user.id %>"><%= user.name %></a></p>
+  <% end %>
+<!-- ink para poder regresar al home, donde podemos crear usuarios. -->
+  <a href="/">Home</a>
