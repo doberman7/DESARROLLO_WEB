@@ -14,7 +14,7 @@ header {
 .content{
   width: 668px;
   height: 500px;
-  padding-right: 10px;
+  padding-right: 0px;
   padding-bottom: 10px;
   border-bottom: 2px solid #666;
   float: left;
@@ -23,11 +23,12 @@ nav{
   width: 90px;
   height: 500px;
   padding-top: 10px;
-
+  padding-left: 5px;
+  padding-right: 5px;
   float: right;
   text-align: center;
   background-color: #acacac;
-  border-bottom: 2px solid #666;
+  border-bottom: 2px solid #666
 }
   ul{
     list-style-type: none;
