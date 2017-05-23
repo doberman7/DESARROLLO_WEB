@@ -1,0 +1,34 @@
+  <h1>Bienvenido a Sinatra!</h1>
+  <p>Este es un esqueleto de sinatra que armamos para ti</p>
+
+<!-- Dentro de tu index view deberás crear dos formas de HTML que contengan únicamente un campo de tipo texto poniéndole como nombre lo que quieras y un botón de ´submit`. El nombre del campo de texto deberá ser diferente para cada forma. -->
+
+<!-- La primera forma debe de hacer una petición GET a /cool_url, es decir action="/cool_url" -->
+<form action="/cool_url"  method="get">
+  <input type="text" name="forma get" placeholder="get">
+  <!-- esta etqueta genera el boton para enviar el get -->
+  <!-- esta es el area de texto, -->
+  <textarea name="tx" rows="10" cols="30" wrap="virtual">Now we are inside the area - which is nice.
+  </textarea><br>
+  <!-- CHECK BOX -->
+    <input type="checkbox" name="checbox1" value="chec" tabindex=""  checked>Chek 1<br>
+    <input type="checkbox" name="checbox2" value="chec" tabindex=""  >Chek 2<br>
+    <input type="checkbox" name="checbox3" value="chec" tabindex=""  >Chek 3<br>
+
+  <input type="submit">
+</form>
+
+<!-- la segunda un POST también a /cool_url. -->
+<form action="/cool_url" method="post" >
+  <input type="text" name="forma post" placeholder="post"><br>
+  <!-- los elementos radio necesitan compartir nombre para funcionar -->
+    <!-- <input type="radio" name="g1" value="1">opcion uno<br>
+    <input type="radio" name="g1" value="2">opcion dos<br>
+    <input type="radio" name="g1" value="3">opcion tres<br> -->
+
+    <input type="text" name="post[title]">
+    <input type="text" name="post[price]">
+    <textarea name="post[description]"></textarea>
+  <!-- al usar el input type ya no es necesario generar el boton con: => <button type="button" name="button">Submit</button>-->
+  <input type="submit">
+</form>
