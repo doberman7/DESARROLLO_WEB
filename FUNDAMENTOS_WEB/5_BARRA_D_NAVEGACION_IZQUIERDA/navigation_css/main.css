@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  width: 768px;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+.content{
+  width: 568;
+  /*height: 650px;*/
+  padding-left: 120px;
+}
+nav{
+  background-color: #acacac;
+  width: 90px;
+  float: left;
+  height: 650px;
+  text-align: center;
+}
+  ul{
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+    a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding-left: 0px;
+    }
+
+.footer{
+  text-align: inherit;
+  margin-top: 20px;
+  padding-left: 160px;
+}
