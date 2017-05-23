@@ -13,15 +13,19 @@ header {
 }
 .content{
   width: 568;
-  /*height: 650px;*/
+  height: 678px;
   padding-left: 120px;
+  height: 470px;
+  border-bottom: 2px solid #666;
+
 }
 nav{
   background-color: #acacac;
   width: 90px;
   float: left;
-  height: 650px;
+  height: 490px;
   text-align: center;
+
 }
   ul{
     list-style-type: none;
@@ -38,5 +42,6 @@ nav{
 .footer{
   text-align: inherit;
   margin-top: 20px;
-  padding-left: 160px;
+  padding-left: 120px;
+  float: left;
 }
