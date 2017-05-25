@@ -1,0 +1,35 @@
+.container {
+  margin: 0 auto;
+  width: 768px;
+}
+.content{
+  margin-top: 60px;
+}
+img{
+  float: left;
+}
+
+nav{
+  width: 768px;
+  background-color: black;
+  position: fixed;
+  top: 0px;
+
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav ul li{
+  vertical-align: center;
+
+  float: left;
+  display: inline;
+  padding-left: 51px;
+}
+
+nav ul li a{
+  color: white;
+  text-decoration: none;
+}
