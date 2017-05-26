@@ -1,8 +1,13 @@
 <h1>Find Anagrams!</h1>
 
 <% if @new_word %>
-  <p>Estos son anagramas para '<%= @new_word %>':</p>
-  <p># Aqui deberás enlistar todos los anagramas</p>
+  <p>Estos son anagramas para '<%= @new_word.capitalize %>':</p>
+  <p># Los ANGRAMAS son</p>
+  <!-- el signo '=' al principio de '@anagramas' significa mostrar en el HTML  -->
+  <%@anagramas.each.with_index do |anagram, index |%>
+        <%index +=1%>
+       <p>'<%=index%>' '<%=anagram%>'</p>
+  <%end%>
+  <!-- http://www.sinatrarb.com/faq.html#partials -->
+<%= erb :_partial_form %>
 <% end %>
-
-

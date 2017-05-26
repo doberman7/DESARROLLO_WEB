@@ -8,7 +8,7 @@ end
 #abrir 'words' cada linea es 'word'
 File.open("words").each.with_index do |word|
 	#ASIGNAR a 'canon_w' cada palabra sin el salto de linea("/n")
-	canon_w=canonical(word.chomp)
+	canon_w=canonical(word.downcase.chomp)
 	#CREAR un objeto Word e insertarlo en la BD con las columnas 'word' y 'canonical_version'
 	p Word.create(word: word.chomp, canonical_version:canon_w)
 end
