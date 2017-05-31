@@ -1,11 +1,18 @@
-var divs = $('.top-nav'),
-    limit = 60;  /* scrolltop value when opacity should be 0 */
 
-$(window).on('scroll', function() {
-   var st = $(this).scrollTop();
+  $(window).on('scroll', function() {
+    var st = $(this).scrollTop();
 
-   /* avoid unnecessary call to jQuery function */
-   if (st <= limit) {
-      divs.css({ 'opacity' : (1 - st/limit) });
-   }
-});
+    var calc  = (1-st/50)
+
+    console.log(calc);
+     /* avoid unnecessary call to jQuery function */
+     if (calc >= '1') {
+        $('.top-nav').css({ 'opacity' : 1});
+
+     } else if (calc < '0') {
+       $('.top-nav').css({ 'opacity' : 0.5 })
+     }
+
+
+
+  });
