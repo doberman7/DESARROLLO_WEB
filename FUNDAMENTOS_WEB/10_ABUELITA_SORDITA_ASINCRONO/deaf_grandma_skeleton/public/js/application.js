@@ -25,7 +25,7 @@ $(document).ready(function() {
     //_?_como functiona el callBac
     var c = $('d').val(callback);
      //console.log('hola');
-		 console.log(c);
+		console.log(callback);
 
 		});
 	});
