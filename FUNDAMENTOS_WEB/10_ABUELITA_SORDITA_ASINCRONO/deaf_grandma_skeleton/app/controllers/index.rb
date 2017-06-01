@@ -13,10 +13,17 @@ end
 
 #redirect to: Redirecciona el navegador al destino especificado en el parametro.
 post '/abuelita' do
+
   user_input = params[:user_input]
-  case user_input
-    when 'bye tqm'  then redirect to('/?abuelita=bye morro')
-    when user_input.upcase   then redirect to('/?abuelita=NO, NO DESDE 1983')
-     else redirect to('/?abuelita=HUH?, NO TE ESCUCHO HIJO!')
+  if request.xhr?
+  # respond to Ajax request
+  "hola2"
+  else
+    case user_input
+      when 'bye tqm'  then redirect to('/?abuelita=bye morro')
+      when user_input.upcase   then redirect to('/?abuelita=NO, NO DESDE 1983')
+       else redirect to('/?abuelita=HUH?, NO TE ESCUCHO HIJO!')
+    end# respond to normal request
   end
+
 end

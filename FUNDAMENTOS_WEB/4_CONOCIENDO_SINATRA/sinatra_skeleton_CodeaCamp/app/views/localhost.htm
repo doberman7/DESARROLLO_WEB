@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://localhost:9393/?abuelita=HUH?,%20NO%20TE%20ESCUCHO%20HIJO! -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- 
+    normalize.css remueve las diferenecia que hay entre browsers segun los defaults de css predeterminados que utilizan. 
+    Revisa: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="./localhost_files/normalize.css">
+  <!--
+    application.css este es el archivo donde van tus estilos, tu css
+  -->
+  <link rel="stylesheet" href="./localhost_files/application.css">
+
+  <script src="./localhost_files/jquery.min.js"></script><style id="dark-reader-style" type="text/css">@media screen {
+
+/* Leading rule */
+html {
+  -webkit-filter: invert(100%) hue-rotate(180deg) brightness(110%) contrast(90%) grayscale(20%) sepia(10%) !important;
+}
+
+/* Contrary rule */
+img, iframe, video, *:not(object):not(body)>embed, object,
+svg image,
+*[style*="background:url"]:empty, *[style*="background-image:url"]:empty,
+*[style*="background: url"]:empty, *[style*="background-image: url"]:empty {
+  -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+}
+
+/* Text contrast */
+html {
+  text-shadow: 0 0 0 !important;
+}
+
+/* Full screen */
+*:-webkit-full-screen, *:-webkit-full-screen * {
+  -webkit-filter: none !important;
+}
+
+/* Page background */
+html {
+  background: rgb(13,13,13) !important;
+}
+
+}</style>
+  <script src="./localhost_files/application.js"></script>
+
+  <title></title>
+</head>
+<body>
+  <div class="container">
+      <h1>Abuelita Sordita</h1>
+  
+    <p>Tu Abuelita dice: "<span id="grandma_says">HUH?, NO TE ESCUCHO HIJO!</span>"</p>
+  
+  <div id="d"></div>
+  <form action="http://localhost:9393/abuelita" method="post" id="forma" name="formName">
+    Dile algo a tu abuelita:
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="Dilo!">
+  </form>
+
+  </div>
+
+
+</body></html>

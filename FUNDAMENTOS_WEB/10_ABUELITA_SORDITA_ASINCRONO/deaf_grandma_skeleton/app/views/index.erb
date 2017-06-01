@@ -2,10 +2,10 @@
   <% if @abuelita %>
     <p>Tu Abuelita dice: "<span id="grandma_says"><%= @abuelita %></span>"</p>
   <% end %>
-
+  <div id='d'></div>
   <form action="/abuelita" method="post" id="forma" name="formName">
     Dile algo a tu abuelita:
     <br>
-    <input type="text" name="user_input">
+    <input type="text" name="user_input" >
     <input type="submit" value="Dilo!">
   </form>
