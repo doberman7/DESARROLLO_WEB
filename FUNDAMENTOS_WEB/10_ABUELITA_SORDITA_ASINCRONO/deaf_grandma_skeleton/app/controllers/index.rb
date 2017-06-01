@@ -15,15 +15,19 @@ end
 post '/abuelita' do
 
   user_input = params[:user_input]
-  if request.xhr?
-  # respond to Ajax request
-  "hola2"
-  else
+  if request.xhr?# respond to Ajax request
     case user_input
       when 'bye tqm'  then redirect to('/?abuelita=bye morro')
       when user_input.upcase   then redirect to('/?abuelita=NO, NO DESDE 1983')
        else redirect to('/?abuelita=HUH?, NO TE ESCUCHO HIJO!')
-    end# respond to normal request
+    end
+  "hola2"
+  else# respond to normal request
+    case user_input
+      when 'bye tqm'  then redirect to('/?abuelita=bye morro')
+      when user_input.upcase   then redirect to('/?abuelita=NO, NO DESDE 1983')
+       else redirect to('/?abuelita=HUH?, NO TE ESCUCHO HIJO!')
+    end
   end
 
 end

@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 		$.post(url,data, function(callback){
     //_?_como functiona el callBac
-    var c = $('d').html(callback);
+    var c = $('d').val(callback);
      //console.log('hola');
 		 console.log(c);
 
