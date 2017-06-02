@@ -1,9 +1,19 @@
-# La forma que tenemos para capturar la información que el usuario introduce en el formulario es por medio de un Hash llamado params.
-#
-# ¿Cuál es el key y cuál es el value del hash params?
-#
-# El key es el valor del atributo name del input de tu formulario.
-# El value es lo que el usuario haya escrito en el input del formulario.
+# metodo para transformar el input del formulario en el caso siin ajax
+def abuelazo(user_input)
+  case user_input
+    when 'bye tqm'  then redirect to('/?abuelita=bye morro')
+    when user_input.upcase   then redirect to('/?abuelita=NO, NO DESDE 1983')
+     else redirect to('/?abuelita=HUH?, NO TE ESCUCHO HIJO!')
+  end
+end
+# metodo para transformar el input del formulario en el caso xhr request
+def abuelazo_requestXhr(user_input)
+  case user_input
+    when 'bye tqm'  then 'bye morro  requestXhr'
+    when user_input.upcase   then 'NO, NO DESDE 1983  requestXhr'
+    else 'HUH?, NO TE ESCUCHO HIJO!....requestXhr'
+  end
+end
 
 get '/' do
   @abuelita = params[:abuelita]
@@ -13,21 +23,11 @@ end
 
 #redirect to: Redirecciona el navegador al destino especificado en el parametro.
 post '/abuelita' do
-
   user_input = params[:user_input]
   if request.xhr?# respond to Ajax request
-    # case user_input
-    #   when 'bye tqm'  then redirect to('/?abuelita=bye morro')
-    #   when user_input.upcase   then redirect to('/?abuelita=NO, NO DESDE 1983')
-    #    else redirect to('/?abuelita=HUH?, NO TE ESCUCHO HIJO!')
-    # end
-  "hola2"
+    abuelazo_requestXhr(user_input)
   else# respond to normal request
-    case user_input
-      when 'bye tqm'  then redirect to('/?abuelita=bye morro')
-      when user_input.upcase   then redirect to('/?abuelita=NO, NO DESDE 1983')
-       else redirect to('/?abuelita=HUH?, NO TE ESCUCHO HIJO!')
-    end
+    abuelazo(user_input)
   end
 
 end
