@@ -23,10 +23,17 @@ post '/home' do
   user = create_usser(u_name,u_email,u_password)
 
   if user.save
-    redirect to("/#{user}")
+    # redirect to("/welcome/#{user.name}")
+    erb :log_in
   else
     erb :home
   end
 
+
+end
+
+get '/welcome/:user' do
+  puts "-" * 50
+ p params[:user]
 
 end
