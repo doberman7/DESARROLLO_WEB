@@ -4,6 +4,9 @@
   Crear cuenta de usuario
   Página secreta
 =end
+def create_usser(u_name,u_email,u_password)
+  Usser.create!(name: u_name,email: u_email,password: u_password)
+end
 
 get '/' do
   # La siguiente linea hace render de la vista
@@ -17,14 +20,13 @@ post '/home' do
   u_email = params[:user_email]
   u_password = params[:user_password]
 
-  #Pruebas del post
-   user = Usser.new(name: u_name,email: u_email,password: u_password)
+  user = create_usser(u_name,u_email,u_password)
 
-    if user.save
-      redirect to("/#{user}")
-    else
-      erb :home
-    end
+  if user.save
+    redirect to("/#{user}")
+  else
+    erb :home
+  end
 
 
 end
